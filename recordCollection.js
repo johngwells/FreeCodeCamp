@@ -60,6 +60,9 @@ function updateRecords(id, prop, value) {
     }
     collection[id][prop].push(value);
   }
+  else if (value === '') {
+    delete collection[id][prop];
+  }
   return collection;
 }
 
